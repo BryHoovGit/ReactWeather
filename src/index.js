@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './components/SeasonDisplay';
+import Spinner from './components/Spinner';
 
 class App extends React.Component {
     //Changed with refactor
@@ -31,7 +32,7 @@ class App extends React.Component {
             return <SeasonDisplay lat={this.state.lat} />
         }
         //No lat, no error
-        return <div>Loading!</div>;
+        return <Spinner />;
     }
 }
 
